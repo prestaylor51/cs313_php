@@ -1,20 +1,24 @@
 .opac {
-	 background: rgba(0, 0, 0, 0.8);
+	 background: rgba(0, 0, 0, 0.9);
 }
 
 h1 { 
 	color:white;
 }
-.grey {
-	color:#a6a6a6;
+.mainColor {
+	color:#b3b3b3;
 }
 
 .orange{
 	color:#e67300;
 }
 
+.hobbyExplain {
+	font-size: 170%;
+}
+
 .hobbiesText {
-	color: #e67300;
+	color: #ff9933;
 }
 .smallJumbo {
 	
@@ -24,7 +28,15 @@ h1 {
 .center {
 	align-content: center;
 }
-
-body {
+.section {
+	height: 300px;
+}
+.body {
 	background-image: url("motherboard-wallpaper-2400x1350.jpg");
+}
+.title {
+	background-image: url("motherboard-wallpaper-2400x1350.jpg");
+}
+body {
+	background-image: url("circuit-board-wallpaper-8.jpg");
 }

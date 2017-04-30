@@ -19,8 +19,8 @@
 	?>
 
 	<div class="container-fluid">
-	<div class="jumbotron grey opac" >
-		<h1 class="grey">Projets Coming Soon</h1>
+	<div class="jumbotron mainColor opac" >
+		<h1 class="mainColor">Projets Coming Soon</h1>
 	</div>
 
 	</div>
