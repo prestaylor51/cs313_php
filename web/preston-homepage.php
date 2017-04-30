@@ -41,7 +41,7 @@
 
 		<div class="row section ">
 			<div class="col-sm-4">
-				<img src="heatSink.jpg" class="img-rounded">
+				<img src="images/heatSink.jpg" class="img-rounded">
 			</div>
 		
 
@@ -61,7 +61,7 @@
 
 		<div class="row section ">
 			<div class="col-sm-4">
-				<img src="Hunting.jpg" class="img-rounded">
+				<img src="images/Hunting.jpg" class="img-rounded">
 			</div>
 			<div class="section col-sm-6 hobbyExplain hobbiesText">
 				<p>Since I can remember I have spent time with my dad and brother out in the woods hunting and fishing. We mostly hunt in the White Mountains of Arizona. Two years ago I harvested an elk there</p>
