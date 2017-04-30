@@ -1,0 +1,30 @@
+.opac {
+	 background: rgba(0, 0, 0, 0.8);
+}
+
+h1 { 
+	color:white;
+}
+.grey {
+	color:#a6a6a6;
+}
+
+.orange{
+	color:#e67300;
+}
+
+.hobbiesText {
+	color: #e67300;
+}
+.smallJumbo {
+	
+	padding: 3px;
+}
+
+.center {
+	align-content: center;
+}
+
+body {
+	background-image: url("motherboard-wallpaper-2400x1350.jpg");
+}
