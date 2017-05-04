@@ -1,0 +1,42 @@
+.opac {
+	 background: rgba(0, 0, 0, 0.9);
+}
+
+h1 { 
+	color:white;
+}
+.mainColor {
+	color:#b3b3b3;
+}
+
+.orange{
+	color:#e67300;
+}
+
+.hobbyExplain {
+	font-size: 170%;
+}
+
+.hobbiesText {
+	color: #ff9933;
+}
+.smallJumbo {
+	
+	padding: 3px;
+}
+
+.center {
+	align-content: center;
+}
+.section {
+	height: 300px;
+}
+.body {
+	background-image: url("images/motherboard-wallpaper-2400x1350.jpg");
+}
+.title {
+	background-image: url("images/motherboard-wallpaper-2400x1350.jpg");
+}
+body {
+	background-image: url("images/circuit-board-wallpaper-8.jpg");
+}
