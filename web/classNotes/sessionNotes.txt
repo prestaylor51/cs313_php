@@ -1,0 +1,6 @@
+Sanatize everything from the client side
+	text fields
+	even drop down menus that are given by the application
+
+GET and POST
+	
