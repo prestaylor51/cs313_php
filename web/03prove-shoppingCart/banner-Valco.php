@@ -5,6 +5,7 @@
 		$cart = "";
 		$checkout = "";
 	}
+	
 	elseif (basename($_SERVER['PHP_SELF']) == 'cart.php') {
 		$browse = "";
 		$cart = "active";
