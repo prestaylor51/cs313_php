@@ -33,7 +33,7 @@
 </head>
 <body>
 	<?php
-		include('banner-ValCo.php');
+		require('banner-ValCo.php');
 	?>
 	<div class="list container">
 	<h1>Knives and Leatherwork</h1>

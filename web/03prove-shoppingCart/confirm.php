@@ -22,7 +22,7 @@
 </head>
 <body>
 	<?php
-		include('banner-ValCo.php');
+		require('banner-ValCo.php');
 	?>
 <div>
 	<h1>Thank you for shopping with us!</h1>
