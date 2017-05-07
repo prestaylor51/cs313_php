@@ -22,7 +22,7 @@
 	<div class="jumbotron mainColor opac" >
 		<h1 class="mainColor">Projets Coming Soon</h1>
 	</div>
-		<a href="03prove-shoppingCart/browse.php">Prove 03</a>
+		<a class="projects" href="03prove-shoppingCart/browse.php">Prove 03</a>
 	</div>
 
 
