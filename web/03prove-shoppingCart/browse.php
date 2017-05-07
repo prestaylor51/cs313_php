@@ -1,55 +1,53 @@
 <?php
 	// start session
 	session_start();
+	$_SESSION['itemName'] = array('knife'=>'Hunting Knife',
+	 							 'sheath'=>'Hunting Knife Sheath',
+	 							 'rrknife'=>'Rail Road Knife',
+	 							 'rrsheath'=> 'Rail Road Knife Sheath',
+	 							 'sknife'=>'Scandi Ground Knife',
+	 							 '45holster'=>'Holster for .45 1911',
+	 							 'glkholster'=>'Holster for GLock');
+	$_SESSION['itemPrice'] = array('knife'=>60,
+	 							 'sheath'=>45,
+	 							 'rrsheath'=>45,
+	 							 'rrknife'=>50,
+	 							 'sknife'=>45,
+	 							 '45holster'=>70,
+	 							 'glkholster'=>70);
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="ValCo.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<title>ValCo Outdoor Goods</title>
 </head>
 <body>
-	<form method="get" action="updateCart.php">
-	<div>
+	<?php
+		include('banner-ValCo.php');
+	?>
+	<div class="list container">
+	<h1>Knives and Leatherwork</h1>
 		<ul>
-			<li>
-				<label for="knife">Hunting Knife</label>
-				<input type="checkbox" name="knife" id="knife">
-			</li>
-				
-			<li>
-				<label for="sheath">Kife Sheath</label>
-				<input type="checkbox" name="sheath" id="ksheath">
-			</li>
-				
-			<li>
-				<label for="rrknife">Rail Road Knife</label>
-				<input type="checkbox" name="rrknife" id="rrknife">
-			</li>	
-				
-			<li>
-				<label for="rrsheath">Rail Road Knife Sheath</label>
-				<input type="checkbox" name="rrsheath" id="rrsheath">
-			</li>
-
-			<li>
-				<label for="sknife">Scandi Ground Kife</label>
-				<input type="checkbox" name="sknife" id="sknife">
-			</li>	
-				
-			<li>
-				<label for="45holster">Holster for .45 1911</label>
-				<input type="checkbox" name="45holster" id="45holster">
-			</li>
-				
-			<li>
-				<label for="glkholster">Holster for Glock</label>
-				<input type="checkbox" name="glkholster" id="glkholster">
-			</li>
+			<?php
+				foreach ($_SESSION['itemName'] as $item => $name) {
+					echo "<form action='updateCart.php' method='post'><button type='submit' name='add' id='$item' value='$item'>Add</button><li>
+						<label for='$item'>$" . $_SESSION['itemPrice'][$item] . "  $name</label>
+						</li>
+						</form>";
+				}
+			?>	
 		</ul>
-			<button type="submit">Add to Cart</button>
+
 	</div>		
-		
-	</form>
 </body>
 </html>
