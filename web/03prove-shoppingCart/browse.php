@@ -33,7 +33,7 @@
 </head>
 <body>
 	<?php
-		require_once('banner-ValCo.php');
+		//require_once('banner-ValCo.php');
 		
 	?>
 	<div class="list container">
