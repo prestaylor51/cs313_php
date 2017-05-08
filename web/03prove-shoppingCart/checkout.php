@@ -14,7 +14,7 @@
 </head>
 <body>
 	<?php
-		require('banner-ValCo.php');
+		require('banner-Valco.php');
 	?>
 <div class="narrow">
 <h1>Checkout</h1>

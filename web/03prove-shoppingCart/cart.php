@@ -18,7 +18,7 @@
 </head>
 <body>
 	<?php
-		require('banner-ValCo.php');
+		require('banner-Valco.php');
 	?>
 	<div class="row container-fluid list">
 		<h1>Items In Your Cart</h1>
