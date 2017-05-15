@@ -24,7 +24,7 @@ CREATE TABLE role
 -- USER --
 CREATE TABLE "user"
 (user_id 		SERIAL 			PRIMARY KEY 
-,usesrname		VARCHAR(100)	NOT NULL UNIQUE	
+,username		VARCHAR(100)	NOT NULL UNIQUE	
 ,password		VARCHAR(20)		NOT NULL UNIQUE
 ,role			INT 			REFERENCES role(role_id)
 ,first_name 	VARCHAR(100)	NOT NULL
@@ -35,7 +35,7 @@ CREATE TABLE "user"
 -- DEPARTMENT --
 CREATE TABLE department
 (department_id 	SERIAL 			PRIMARY KEY
-,name 			VARCHAR(100) 	NOT NULL
+,name 			VARCHAR(100) 	NOT NULL UNIQUE
 );
 
 
@@ -61,7 +61,51 @@ CREATE TABLE customer
 -- PURCHASE --
 CREATE TABLE purchase
 (purchase_id 	SERIAL 		PRIMARY KEY
-,customer 		INT  		REFERENCES customer(customer_id)	
-,item 			INT 		REFERENCES item(item_id)
+,customer 		INT  		NOT NULL REFERENCES customer(customer_id)	
+,item 			INT 		NOT NULL REFERENCES item(item_id)
 ,payment		MONEY		NOT NULL
 ,"date"  		DATE 		NOT NULL);
+
+
+-- INSERT USER--
+INSERT INTO "user"
+(username, password, first_name, last_name)
+VALUES
+('pdawg', 'pdawgtheman', 'Preston','Taylor');
+
+INSERT INTO "user"
+(username, password, first_name, last_name)
+VALUES
+('bossman','12345', 'Val', 'Taylor');
+
+-- INSERT CUSTOMER --
+INSERT INTO customer
+(first_name, last_name, email, address)
+VALUES
+('Peter', 'Frampton', 'pframp456@gmail.com','123 W 6th St jonesville, CA 45678' );
+
+
+-- INSERT INTO DEPARTMENT --
+INSERT INTO department
+(name)
+VALUES
+('Knives');
+
+-- INSERT ITEM --
+INSERT INTO item
+(item_name, department, quantity, price)
+VALUES
+('Scandi Ground Bushcrafter', 1, 10, 50.00);
+
+-- INSERT INTO PURCHASE --
+
+INSERT INTO purchase
+(customer, item, payment, "date") 
+VALUES
+(1, 1, 50.00, '10 May 2017');
+
+
+-- SELECT STATEMENT --
+SELECT * FROM purchase AS p 
+	JOIN customer as c 
+	on p.customer = 1;
