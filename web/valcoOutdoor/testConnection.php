@@ -24,7 +24,7 @@ $db = new PDO("pgsql:host=$dbHost;port=$dbPort;dbname=$dbName", $dbUser, $dbPass
 
 foreach ($db->query('SELECT * FROM purchase AS p 
 	JOIN customer as c 
-	on p.customer = 1 ') AS $row) {
+	on p.customer = 1 and c.customer_id = 1 ') AS $row) {
 
 		echo '<br>';
 		echo $row['first_name'] . " ";
