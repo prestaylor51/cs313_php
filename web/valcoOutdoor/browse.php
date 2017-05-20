@@ -36,7 +36,7 @@
 <body>
 	<?php
 		require_once('banner-Valco.php');
-		// connect to the database
+		// connect to the database as $db
 		require_once('accessdatabase.php');
 	?>
 	<div class="list container">
