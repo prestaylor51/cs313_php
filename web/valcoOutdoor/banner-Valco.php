@@ -1,5 +1,5 @@
 
-<!-- <?php
+<?php
 	if (basename($_SERVER['PHP_SELF']) == 'browse.php') {
 		$browse = "active";
 		$cart = "";
@@ -31,7 +31,7 @@
 		$checkout = "";
 		$login = "";
 	}
-?> -->
+?> 
 
 
 <nav class="navbar navbar-default">

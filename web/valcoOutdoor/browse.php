@@ -1,20 +1,22 @@
 <?php
 	// start session
 	session_start();
-	$_SESSION['itemName'] = array('knife'=>'Hunting Knife',
-	 							 'sheath'=>'Hunting Knife Sheath',
-	 							 'rrknife'=>'Rail Road Knife',
-	 							 'rrsheath'=> 'Rail Road Knife Sheath',
-	 							 'sknife'=>'Scandi Ground Knife',
-	 							 '45holster'=>'Holster for .45 1911',
-	 							 'glkholster'=>'Holster for GLock');
-	$_SESSION['itemPrice'] = array('knife'=>60,
-	 							 'sheath'=>45,
-	 							 'rrsheath'=>45,
-	 							 'rrknife'=>50,
-	 							 'sknife'=>45,
-	 							 '45holster'=>70,
-	 							 'glkholster'=>70);
+	echo session_id();
+	// $_SESSION['itemName'] = array('knife'=>'Hunting Knife',
+	//  							 'sheath'=>'Hunting Knife Sheath',
+	//  							 'rrknife'=>'Rail Road Knife',
+	//  							 'rrsheath'=> 'Rail Road Knife Sheath',
+	//  							 'sknife'=>'Scandi Ground Knife',
+	//  							 '45holster'=>'Holster for .45 1911',
+	//  							 'glkholster'=>'Holster for GLock');
+	// $_SESSION['itemPrice'] = array('knife'=>60,
+	//  							 'sheath'=>45,
+	//  							 'rrsheath'=>45,
+	//  							 'rrknife'=>50,
+	//  							 'sknife'=>45,
+	//  							 '45holster'=>70,
+	//  							 'glkholster'=>70);
+	
 ?>
 
 <!DOCTYPE html>
@@ -34,18 +36,33 @@
 <body>
 	<?php
 		require_once('banner-Valco.php');
-		
+		// connect to the database
+		require_once('accessdatabase.php');
 	?>
 	<div class="list container">
 	<h1>Knives and Leatherwork</h1>
 		<ul>
 			<?php
-				foreach ($_SESSION['itemName'] as $item => $name) {
-					echo "<form action='updateCart.php' method='post'><button type='submit' name='add' id='$item' value='$item'>Add</button><li>
-						<label for='$item'>$" . $_SESSION['itemPrice'][$item] . "  $name</label>
-						</li>
+				// foreach ($_SESSION['itemName'] as $item => $name) {
+				// 	echo "<form action='updateCart.php' method='post'><button type='submit' name='add' id='$item' value='$item'>Add</button><li>
+				// 		<label for='$item'>$" . $_SESSION['itemPrice'][$item] . "  $name</label>
+				// 		</li>
+				// 		</form>";
+				// }
+
+				foreach($db->query('SELECT * FROM item') as $row){
+					echo "<form action='updateCart.php' method='post'>
+					<button type='submit' name='add' id='" . $row['item_id'] . "' value='" . $row['item_id'] . "'>Add</button>
+					<li>
+						<label for='" . $row['item_id'] . "'>" . $row['price'] . " " . $row['item_name'] . "</label>
+					</li>
 						</form>";
+
+							//$_SESSION[$row['item_id']] = 'rfc';
 				}
+
+				print_r($_SESSION);
+
 			?>	
 		</ul>
 

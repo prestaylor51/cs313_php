@@ -1,4 +1,6 @@
 <?php
+	session_start();
+	
 	$dbUrl = getenv('DATABASE_URL');
 
 	if (empty($dbUrl)) {
