@@ -33,7 +33,7 @@
 				print_r($_SESSION);
 				foreach ($_SESSION as $item => $status ) {
 
-					echo $item;
+					echo $item . " " . $status . "<br>";
 					if ($status == 'carted'){
 						// echo "<form method='post' action='updateCart.php'>
 						// 		<li> 

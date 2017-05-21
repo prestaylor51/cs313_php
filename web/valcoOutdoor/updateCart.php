@@ -2,6 +2,7 @@
 <?php
 	session_start();
 	echo session_id();
+	print_r($_POST);
 
 	// Clear whole cart
 	if (isset($_POST['clear'])) {
@@ -23,7 +24,7 @@
 	// Add an item to the cart
 	if (isset($_POST['add'])) {
 		$toAdd = $_POST['add'];
-
+		echo $_POST['add'] . "<br>";
 		$_SESSION[$toAdd] = "carted";
 
 		print_r($_SESSION);
@@ -31,12 +32,7 @@
 		// die();
 	}
 
-	// foreach ($_GET as $key => $item) {
-	// 	if ($item == "on") {
-	// 		$_SESSION[$key] = "carted";		
-	// 	}	
-	// }
-
+	
 	//header("Location: browse.php");
 
 ?>

@@ -2,6 +2,7 @@
 	// start session
 	session_start();
 	echo session_id();
+	print_r($_SESSION);
 	// $_SESSION['itemName'] = array('knife'=>'Hunting Knife',
 	//  							 'sheath'=>'Hunting Knife Sheath',
 	//  							 'rrknife'=>'Rail Road Knife',
@@ -61,7 +62,7 @@
 							//$_SESSION[$row['item_id']] = 'rfc';
 				}
 
-				print_r($_SESSION);
+				
 
 			?>	
 		</ul>
