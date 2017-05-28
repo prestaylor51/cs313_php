@@ -26,10 +26,6 @@
 		<ul>
 			<?php
 				
-				foreach($_SESSION['cart'] as $key => $value){
-					echo " $key => $value";
-				}
-
 				foreach($db->query('SELECT * FROM item;') as $row){
 					echo "<form action='updateCart.php' method='post'>
 					<button type='submit' name='add' id='" . $row['item_id'] . "' value='" . $row['item_id'] . "'>Add</button>

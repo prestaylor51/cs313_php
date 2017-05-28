@@ -13,7 +13,7 @@
 	if (isset($_POST['remove'])) {
 		$toBeRemoved = $_POST['remove'];
 
-		$_SESSION[$toBeRemoved] = "rfc";
+		$_SESSION['cart'][$toBeRemoved] = "rfc";
 
 		header("Location: cart.php");
 		die();
