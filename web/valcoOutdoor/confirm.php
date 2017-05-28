@@ -28,7 +28,6 @@
 		<ul>
 		<?php 
 
-			//print_r($_SESSION);
 			foreach ($_SESSION['cart'] as $item => $status) {
 
 				foreach($db->query("SELECT item_name, price FROM item i WHERE i.item_id = $item;") as $row);
