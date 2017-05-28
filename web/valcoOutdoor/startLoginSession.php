@@ -21,7 +21,11 @@
 	}
 	else {
 		foreach( $rows as $row){
-			echo $row['first_name'] . ", You are logged in.";
+			$_SESSION['user'] = $row['first_name'];
+			header("Location: inventoryUpdate.php");
+			die();
+			
+			
 		}
 	}
 	

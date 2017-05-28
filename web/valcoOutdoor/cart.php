@@ -37,7 +37,7 @@
 
 							<button type='submit' name='remove' value='$item'>Remove</button>
 							</li>
-						</form>";
+						</form>";	
 					}
 				}
 			?>

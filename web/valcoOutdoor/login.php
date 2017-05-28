@@ -16,13 +16,19 @@
 
 <div class="narrow">
 	<form method="POST" action="startLoginSession.php">
-		<input class="inputPad" type="text" name="username" id="username">
-		<label for="username">username</label>
-		<br>
-		<input type="text" name="password" id="password">
-		<label for="password">password</label>
-		<br> <br>
-		<button type="submit">Login</button>
+		<ul>
+			<li>
+			<label for="username">username</label>
+			<input type="text" name="username" id="username"></li>
+			
+			<br>
+			<li>
+			<label for="password">password</label>
+			<input type="text" name="password" id="password"></li>
+			
+			<br> <br>
+			<button type="submit">Login</button>
+		</ul>
 
 	</form>
 </div>
