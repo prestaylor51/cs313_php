@@ -5,19 +5,15 @@
 	$fullStreet = htmlspecialchars($_POST['street']);
 	$location = htmlspecialchars($_POST['city'] . ", " . $_POST['state'] . " " . $_POST['zip']); 
 
+	require_once("accessdatabase.php");
+
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="ValCo.css">
-	<!-- jQuery library -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<!-- Latest compiled JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<?php
+		require_once('valcoHeader.php');
+	?>
 	<title>Confirmation</title>
 </head>
 <body>
@@ -31,9 +27,14 @@
 		<h4>Items</h4>
 		<ul>
 		<?php 
-			foreach ($_SESSION as $item => $status) {
+
+			//print_r($_SESSION);
+			foreach ($_SESSION['cart'] as $item => $status) {
+
+				foreach($db->query("SELECT item_name, price FROM item i WHERE i.item_id = $item;") as $row);
+
 				if ($status == 'carted') {
-					echo "<li>" . $_SESSION['itemName'][$item] . "  $" . $_SESSION['itemPrice'][$item] . "</li>";
+					echo "<li>" . $row['item_name'] . "  " . $row['price'] . "</li>";
 				}
 			}
 		?>

@@ -7,7 +7,7 @@
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 
-	$stmt = $db->prepare('SELECT * FROM employee as e
+	$stmt = $db->prepare('SELECT first_name FROM employee as e
 							WHERE e.username = :username AND 
 								  e.password = :password');
 

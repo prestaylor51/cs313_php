@@ -1,8 +1,6 @@
 
 <?php
 	session_start();
-	echo session_id();
-	print_r($_POST);
 
 	// Clear whole cart
 	if (isset($_POST['clear'])) {
@@ -25,15 +23,15 @@
 	if (isset($_POST['add'])) {
 		$toAdd = $_POST['add'];
 		echo $_POST['add'] . "<br>";
-		$_SESSION[$toAdd] = "carted";
+		$_SESSION["_" . $toAdd] = "carted";
+		$_SESSION['cart'][$toAdd] = "carted";
 
-		print_r($_SESSION);
-		// header("Location: browse.php");
-		// die();
+		header("Location: browse.php");
+		die();
 	}
 
-	
-	//header("Location: browse.php");
+	header("Location: browse.php");
+	die();
 
 ?>
 
