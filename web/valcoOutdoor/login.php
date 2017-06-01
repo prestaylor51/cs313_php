@@ -24,7 +24,7 @@
 			<br>
 			<li>
 			<label for="password">password</label>
-			<input type="text" name="password" id="password"></li>
+			<input type="password" name="password" id="password"></li>
 			
 			<br> <br>
 			<button type="submit">Login</button>
