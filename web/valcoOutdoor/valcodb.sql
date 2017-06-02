@@ -107,3 +107,15 @@ VALUES
 SELECT * FROM purchase AS p 
 	JOIN customer as c 
 	on p.customer = 1;
+
+
+	-- Here are some other important queries I used to set up the database --
+
+	-- Dropping a column
+		ALTER TABLE employee DROP COLUMN password;
+	-- Adding a column
+		ALTER TABLE employee ADD COLUMN password VARCHAR(255);
+	-- Updating a column
+		UPDATE employee SET password = 'thepassword' WHERE username = 'username';
+	-- Adding a NOT NULL Constraint to a column (after putting data in the columns)
+		ALTER TABLE employee ALTER COLUMN password SET NOT NULL;
