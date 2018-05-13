@@ -1,9 +1,9 @@
 <?php
 	
 	try {
-		$user = 'postgres';
-		$password = 'postgres';
-		$db = new PDO('pgsql:host=127.0.0.1;dbname=valcodb', $user,$password);
+		$user = 'user';
+		$password = 'password';
+		$db = new PDO('', $user,$password);
 	}
 	catch (PDOExeption $ex){
 		echo 'Error: ' . $ex->getMessage();
